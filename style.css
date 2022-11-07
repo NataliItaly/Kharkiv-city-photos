@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(190, 242, 242);
+  color: rgb(6 6 6);
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 20px;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.4s;
+  color: inherit;
+  padding: 10px;
+}
+ul {
+  list-style: none;
+}
+section {
+  margin-bottom: 20px;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(220, 237, 251, 0.1);
+  z-index: 1;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+  background-image: url("https://raw.githubusercontent.com/NataliItaly/Kharkiv-city-photos/master/kharkiv-images/kharkiv-emblem.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+button:focus {
+  outline: none;
+}
+.language-buttons-wrapper {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+.language-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #444343;
+  border: none;
+  cursor: pointer;
+  background-color: #30a3f5;
+}
+.current-language {
+  background-color: yellow;
+}
+.header-link {
+  display: block;
+}
+.first-screen {
+  position: relative;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 0.6s ease-in-out;
+}
+.first-screen .container {
+  padding: 10px 0;
+  height: 100%;
+}
+h1 {
+  width: fit-content;
+  background-color: rgba(220, 237, 251, 0.7);
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;
+  margin: 70px auto 0;
+  color: rgb(88 83 83);
+  padding: 0 20px;
+  border-radius: 15px;
+}
+.date-time-block {
+  position: absolute;
+  background-color: rgba(220, 237, 251, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  top: 170px;
+  left: 20px;
+  text-align: center;
+}
+.weather-block {
+  position: absolute;
+  top: 170px;
+  right: 20px;
+  background-color: rgba(220, 237, 251, 0.7);
+  padding: 10px;
+  border-radius: 10px 20px;
+  text-align: center;
+}
+.weather-description {
+  text-align: center;
+}
+.week-forecast {
+  max-width: 100%;
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: rgba(220, 237, 251, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
+.day-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#history {
+  position: relative;
+  display: flex;
+}
+#history .container {
+  width: 70%;
+}
+
+.history-block {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.section-title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.history-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 40px;
+}
+.history-description-wrapper {
+  overflow: hidden;
+}
+.history-description {
+  transition: transform 0.4s;
+}
+.hidden {
+  display: none;
+  transform: translateY(-100%);
+}
+aside {
+  width: 30%;
+  background-image: url("https://raw.githubusercontent.com/NataliItaly/Kharkiv-city-photos/master/kharkiv-images/ukraine-emblem.png");
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  background-size: contain;
+}
+#about .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.secondary-slider-wrapper {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+}
+.sidebar {
+  height: fit-content;
+  width: 35%;
+  position: relative;
+  top: -2000px;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  transition: transform 0.5s ease-in-out;
+  background-color: #cef5f3;
+}
+
+.sidebar > div {
+  height: 400px;
+  padding: 40px 20px;
+  width: 100%;
+  position: relative;
+}
+
+.sidebar h4 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.main-slide {
+  height: fit-content;
+  /*  position: absolute;
+  top: 0;
+  left: 35%; */
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.main-slide > div {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+
+.controls button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+  font-size: 22px;
+  color: #444343;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.controls .down-button {
+  transform: translate(85px, -120px);
+}
+
+.controls .up-button {
+  transform: translate(85px, 120px);
+}
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.city-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.city-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(61, 59, 59, 0.481);
+}
+.creators-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.creators-link {
+  padding: 10px 0;
+}
